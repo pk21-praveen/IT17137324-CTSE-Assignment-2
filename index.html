@@ -10,18 +10,19 @@
 
 <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-         <!-- importing asset -->
+         <!-- adding a 3D object asset -->
         <a-assets>
             <a-asset-item id="bridge-obj" src="assets/chineseBridge.obj"></a-asset-item>
         </a-assets>
+        <!-- adding a custom marker -->
         <a-marker-camera preset="custom" type="pattern" url="assets/pattern-bridge.patt">
-            <!-- importing company logo with name with slogan-->
+            <!-- adding an entity for company logo with name & slogan-->
             <a-image src="assets/company.png" position="0.8 3 0" ></a-image>
-            <!-- importing Item name -->
+            <!-- adding an entity for item name -->
             <a-entity scale="3.5 3.5 3.5" position="0 3 0" text="value: Item: Chinese Bridge;color:white" ></a-entity>
-            <!-- importing price -->
+            <!-- adding an entity for price -->
             <a-entity scale="3 3 3" position="0 2.7 0"  text="value: Price: Rs.1000/=;color:white" ></a-entity>
-            <!-- importing #D object -->
+            <!-- adding an entity for 3D object -->
             <a-entity scale="0.35 0.35 0.35" position="0 0 0" rotation="125 0 25" obj-model="obj: #bridge-obj;" material="src: assets/texture.jpg"></a-entity>
         </a-marker-camera>
     </a-scene>
